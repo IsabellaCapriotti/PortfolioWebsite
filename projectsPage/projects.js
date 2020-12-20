@@ -2,13 +2,59 @@
 const projects = {
 
     'weGrow': {
-        'description': 'idk you tell me', 
+        'description': 'A cross-platform Xamarin Forms app aimed at users trying to gain weight for health reasons. Stores user data in a SQLite database, and offers a variety of different goal-tracking methods for a customized user experience. Features a plant-themed UI to fit with the message of growing into better things.', 
         'videoLink': 'https://www.youtube.com',
         'bgImage': 'weGrowBG.png',
         'name': 'WeGrow App',
-        'languages': ['C#', 'XAML', 'Xamarin Forms' , '.NET Framework'],
+        'languages': ['C#', 'XAML', 'Xamarin Forms' , '.NET Framework', 'SQLite'],
         'github': 'https://github.com/IsabellaCapriotti/WeGrowApp'
     },
+
+    'cppUno': {
+        'description': '',
+        'videoLink': 'https://www.youtube.com',
+        'bgImage': 'uno.jpg',
+        'name': 'Command Line Uno',
+        'languages': ['C++'],
+        'github': 'https://github.com/IsabellaCapriotti/CommandLineUno'
+    },
+
+    'pokeInfo': {
+        'description': '',
+        'videoLink': 'https://www.youtube.com',
+        'bgImage': 'pokeball.jpg',
+        'name': 'Pokemon Info Grabber',
+        'languages': ['Python'],
+        'github': 'https://github.com/IsabellaCapriotti/PythonPokemonInfoGrabber'
+    },
+
+    'pulseLog':{
+        'description': '',
+        'videoLink': 'https://www.youtube.com',
+        'bgImage': 'pulse.png',
+        'name': 'Pulse Logger',
+        'languages': ['JavaScript', 'HTML', 'CSS'],
+        'github': 'https://github.com/IsabellaCapriotti/JSPulseLogger'
+    },
+
+    'deathRow':{
+        'description': '',
+        'videoLink': 'https://www.youtube.com',
+        'bgImage': 'prison.jpg',
+        'name': 'Death Row Data',
+        'languages': ['Python', 'SQLite'],
+        'github': 'https://github.com/IsabellaCapriotti/TexasDeathRowData'
+    },
+
+    'gameOfLife':{
+        'description': '',
+        'videoLink': 'https://www.youtube.com',
+        'bgImage': 'cells.jpg',
+        'name': 'ASM Game of Life',
+        'languages': ['x86 Assembly'],
+        'github': 'https://github.com/IsabellaCapriotti/TexasDeathRowData'
+    },
+
 }; 
 
 
@@ -133,12 +179,18 @@ function generateProjectCards(){
             
             infoPanelItems.push(gitHubLink); 
             
-
+    
+            //YouTube demo
+            const demoVideo = document.createElement('iframe'); 
+            demoVideo.classList.add('demoVideo'); 
+            demoVideo.setAttribute('src', currentProject.videoLink);
+            infoPanelItems.push(demoVideo); 
+    
             infoPanelItems.forEach( (item) => {
                 projectInfoPanel.appendChild(item); 
             });
 
-    
+
             projectDetailsContainer.appendChild(projectInfoPanel); 
             modalCover.appendChild(projectDetailsContainer); 
         }); 
