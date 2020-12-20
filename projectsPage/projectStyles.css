@@ -1,0 +1,158 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* Page container */
+.pageContainer{
+    width: 100vw;
+    height: 100vh; 
+    background-color: #E8D2AE; 
+    display: flex;
+    flex-flow: column; 
+}
+
+
+/* Header */ 
+.projectsHeader{
+    font-family: 'Amatic SC', cursive; 
+    text-align: center;
+    font-size: 6rem;
+    color: #EB681C;
+}
+
+/* Home Button */ 
+.homeBtn{
+    position: absolute; 
+    right: 3%;
+    top: 3%; 
+    background: transparent; 
+    border: none; 
+    color: #688E52; 
+    font-size: 2rem;
+}
+
+.homeBtn:hover{
+    color: #3b502f;
+}
+
+.homeBtn:visited{
+    color: #688E52; 
+}
+
+
+/* Project Card Container and Cards*/ 
+.projectCardContainer{
+    display: flex;
+    flex-flow: row; 
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    width: 80vw; 
+    height: 85vh; 
+    padding: 3rem;
+}
+
+.projectCard{
+    background-color: #D7B29D; 
+    background: url('projectPictures/weGrowBG.png');
+    background-size: contain;
+    width: 10rem;
+    height: 12rem;
+    border-radius: 3px; 
+    display: flex;
+    flex-flow: column; 
+    justify-content: center;
+    box-shadow: 2px 2px 3px #3C3D3D;
+}
+
+.projectCard:hover{
+    box-shadow: 4px 4px 3px #3C3D3D;
+    cursor: pointer;
+}
+
+.projectCard .projectTitle{
+    background-color: white; 
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-family: 'Raleway', sans-serif; 
+}
+
+/* Project Details Modal */ 
+.modalCover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px; 
+    left: 0px; 
+    background-color: rgba(0, 0, 0, .5); 
+    width: 100%;
+    height: 100%; 
+    z-index: 2; 
+}
+
+.projectDetailsContainer{
+    background-color: #D7B29D;
+    width: 80vw;
+    height: 70vh; 
+    border-radius: 8px;
+    display: flex;
+    flex-flow: row; 
+    position: relative;
+    z-index: 3; 
+}
+
+/* Info Panel */
+.projectInfoPanel{
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-flow: column; 
+    align-items: center;
+    flex-wrap: wrap; 
+    justify-content: flex-start;
+    padding: 2rem;
+    line-height: 3.5rem;
+}
+
+.nameHeader{
+    font-family: 'Fjalla One', sans-serif; 
+    color: #688e52;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.projectInfoText{
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 400; 
+    color: #3C3D3D;
+    font-size: 1.1rem;
+}
+
+.projectInfoSectionHead{
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 700; 
+    font-size: 1.3rem;
+}
+
+.gitHubLink{
+    text-decoration: none;
+}
+
+.gitHubLink:link{
+    color: #3C3D3D;
+}
+
+.gitHubLink:visited{
+    color: #3C3D3D;
+}
+
+.gitHubLink:hover{
+    color: #688e52;
+}
+
+.gitHubLink:active{
+    color: #688e52;
+}
