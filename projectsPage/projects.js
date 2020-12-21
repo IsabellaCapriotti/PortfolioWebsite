@@ -70,7 +70,7 @@ const projects = {
         'videoLink': 'https://www.youtube.com/embed/mAXYRuXrXS0',
         'name': 'Movie Search',
         'languages': ['JavaScript', 'HTML', 'CSS', 'React', 'API'],
-        'github': 'https://github.com/IsabellaCapriotti/TexasDeathRowData'
+        'github': 'https://github.com/IsabellaCapriotti/MovieSearch'
     },
 
 }; 
