@@ -3,17 +3,24 @@ const projects = {
 
     'weGrow': {
         'description': 'A cross-platform Xamarin Forms app aimed at users trying to gain weight for health reasons. Stores user data in a SQLite database, and offers a variety of different goal-tracking methods for a customized user experience. Features a plant-themed UI to fit with the message of growing into better things.', 
-        'videoLink': 'https://www.youtube.com',
-        'bgImage': 'weGrowBG.png',
+        'videoLink': 'https://www.youtube.com/embed/WfolQdgKDac',
+        'fullEmbedCode': '<iframe width="560" height="315" src="https://www.youtube.com/embed/WfolQdgKDac" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
         'name': 'WeGrow App',
         'languages': ['C#', 'XAML', 'Xamarin Forms' , '.NET Framework', 'SQLite'],
         'github': 'https://github.com/IsabellaCapriotti/WeGrowApp'
     },
 
+    'mp3DB': {
+        'description': '',
+        'videoLink': 'https://www.youtube.com/embed/YZk3WO04750',
+        'name': 'MP3 File Database',
+        'languages': ['Python', 'SQLite'],
+        'github': 'https://github.com/IsabellaCapriotti/PythonMusicDatabaseUpdater'
+    },
+
     'cppUno': {
         'description': '',
-        'videoLink': 'https://www.youtube.com',
-        'bgImage': 'uno.jpg',
+        'videoLink': 'https://www.youtube.com/embed/mGSGeBLMdV4',
         'name': 'Command Line Uno',
         'languages': ['C++'],
         'github': 'https://github.com/IsabellaCapriotti/CommandLineUno'
@@ -21,8 +28,7 @@ const projects = {
 
     'pokeInfo': {
         'description': '',
-        'videoLink': 'https://www.youtube.com',
-        'bgImage': 'pokeball.jpg',
+        'videoLink': 'https://www.youtube.com/embed/WWLIzPjz_bE',
         'name': 'Pokemon Info Grabber',
         'languages': ['Python'],
         'github': 'https://github.com/IsabellaCapriotti/PythonPokemonInfoGrabber'
@@ -30,8 +36,7 @@ const projects = {
 
     'pulseLog':{
         'description': '',
-        'videoLink': 'https://www.youtube.com',
-        'bgImage': 'pulse.png',
+        'videoLink': 'https://www.youtube.com/embed/LEJbQCE2cpU',
         'name': 'Pulse Logger',
         'languages': ['JavaScript', 'HTML', 'CSS'],
         'github': 'https://github.com/IsabellaCapriotti/JSPulseLogger'
@@ -39,8 +44,7 @@ const projects = {
 
     'deathRow':{
         'description': '',
-        'videoLink': 'https://www.youtube.com',
-        'bgImage': 'prison.jpg',
+        'videoLink': 'https://www.youtube.com/embed/KuGycGZLDQU',
         'name': 'Death Row Data',
         'languages': ['Python', 'SQLite'],
         'github': 'https://github.com/IsabellaCapriotti/TexasDeathRowData'
@@ -48,10 +52,25 @@ const projects = {
 
     'gameOfLife':{
         'description': '',
-        'videoLink': 'https://www.youtube.com',
-        'bgImage': 'cells.jpg',
+        'videoLink': 'https://www.youtube.com/embed/gA6SspptQug',
         'name': 'ASM Game of Life',
         'languages': ['x86 Assembly'],
+        'github': 'https://github.com/IsabellaCapriotti/MIPSGameOfLife'
+    },
+
+    'markdownPreview':{
+        'description': '',
+        'videoLink': 'https://www.youtube.com/embed/M2euDW0ssxk',
+        'name': 'Markdown Previewer',
+        'languages': ['JavaScript', 'HTML', 'CSS', 'React'],
+        'github': 'https://github.com/IsabellaCapriotti/JSMarkdownPreviewer'
+    },
+
+    'movieSearch':{
+        'description': '',
+        'videoLink': 'https://www.youtube.com/embed/mAXYRuXrXS0',
+        'name': 'Movie Search',
+        'languages': ['JavaScript', 'HTML', 'CSS', 'React'],
         'github': 'https://github.com/IsabellaCapriotti/TexasDeathRowData'
     },
 
@@ -64,6 +83,10 @@ function generateProjectCards(){
     const projectCardContainer = document.querySelector('.projectCardContainer'); 
     const allProjects = Object.keys(projects); 
 
+    const saturation = 100; 
+    const lightness = 85; 
+    let hue = 13; 
+
     allProjects.forEach( (project) => {
 
         // Generate new card
@@ -73,9 +96,9 @@ function generateProjectCards(){
 
         project = projects[project]; 
 
-        // Add appropriate background image and title
-        newProjectCard.style["background"] = `url("projectPictures/${project['bgImage']}")`;
-        newProjectCard.style["background-size"] = "contain"; 
+        // Add background color
+        newProjectCard.style["background-color"] = `hsl(${hue}, ${saturation}%, ${lightness}%)`; 
+        hue = hue + 40; 
 
         const newTitle = document.createElement('div'); 
         newTitle.classList.add('projectTitle'); 
@@ -184,8 +207,9 @@ function generateProjectCards(){
             const demoVideo = document.createElement('iframe'); 
             demoVideo.classList.add('demoVideo'); 
             demoVideo.setAttribute('src', currentProject.videoLink);
-            infoPanelItems.push(demoVideo); 
-    
+            
+            projectDetailsContainer.appendChild(demoVideo); 
+
             infoPanelItems.forEach( (item) => {
                 projectInfoPanel.appendChild(item); 
             });
