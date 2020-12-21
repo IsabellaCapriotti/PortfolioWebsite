@@ -4,14 +4,13 @@ const projects = {
     'weGrow': {
         'description': 'A cross-platform Xamarin Forms app aimed at users trying to gain weight for health reasons. Stores user data in a SQLite database, and offers a variety of different goal-tracking methods for a customized user experience. Features a plant-themed UI to fit with the message of growing into better things.', 
         'videoLink': 'https://www.youtube.com/embed/WfolQdgKDac',
-        'fullEmbedCode': '<iframe width="560" height="315" src="https://www.youtube.com/embed/WfolQdgKDac" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
         'name': 'WeGrow App',
         'languages': ['C#', 'XAML', 'Xamarin Forms' , '.NET Framework', 'SQLite'],
         'github': 'https://github.com/IsabellaCapriotti/WeGrowApp'
     },
 
     'mp3DB': {
-        'description': '',
+        'description': 'A tool that populates a SQLite database with metadata on all MP3 files in a given folder. Uses the EyeD3 library to extract information including the artist, album, creation date, and length of each song, if available.',
         'videoLink': 'https://www.youtube.com/embed/YZk3WO04750',
         'name': 'MP3 File Database',
         'languages': ['Python', 'SQLite'],
@@ -19,7 +18,7 @@ const projects = {
     },
 
     'cppUno': {
-        'description': '',
+        'description': 'A command-line implementation of the popular card game, Uno! Implements the classic ruleset of the game by using multiple classes to represent game constructs such as cards, decks, and players. Allows up to 4 human-controlled players. Provides an engaging way to pass time, even without a WiFi connection.',
         'videoLink': 'https://www.youtube.com/embed/mGSGeBLMdV4',
         'name': 'Command Line Uno',
         'languages': ['C++'],
@@ -27,7 +26,7 @@ const projects = {
     },
 
     'pokeInfo': {
-        'description': '',
+        'description': 'An application that parses data from The Pokemon Database to serve a variety of information on the Pokemon games to the user, including stats, moves, abilities, types, and items.',
         'videoLink': 'https://www.youtube.com/embed/WWLIzPjz_bE',
         'name': 'Pokemon Info Grabber',
         'languages': ['Python'],
@@ -35,7 +34,7 @@ const projects = {
     },
 
     'pulseLog':{
-        'description': '',
+        'description': 'A web app that allows the user to track their resting and active heart rates across a series of days. Users local browser storage to persist state across uses.',
         'videoLink': 'https://www.youtube.com/embed/LEJbQCE2cpU',
         'name': 'Pulse Logger',
         'languages': ['JavaScript', 'HTML', 'CSS'],
@@ -43,7 +42,7 @@ const projects = {
     },
 
     'deathRow':{
-        'description': '',
+        'description': "An application that parses web data from Texas's state death row database, and populates a SQLite database with the information it gathered. After the data has been loaded, it will display a randomly chosen individual's information upon running. While information was not available for all the subjects' last words, those who did make a statement are represented in this database.",
         'videoLink': 'https://www.youtube.com/embed/KuGycGZLDQU',
         'name': 'Death Row Data',
         'languages': ['Python', 'SQLite'],
@@ -51,15 +50,15 @@ const projects = {
     },
 
     'gameOfLife':{
-        'description': '',
+        'description': "Conway's Game of Life implemented in MIPS Assembly. Uses a two-dimensional array with wrap-around edges to simulate an infinite board. Originally developed to run on the QTSpim simulator.",
         'videoLink': 'https://www.youtube.com/embed/gA6SspptQug',
         'name': 'ASM Game of Life',
-        'languages': ['x86 Assembly'],
+        'languages': ['MIPS Assembly'],
         'github': 'https://github.com/IsabellaCapriotti/MIPSGameOfLife'
     },
 
     'markdownPreview':{
-        'description': '',
+        'description': 'A web application that allows the user to type markdown in the top pane, and dynamically see a formatted preview in the bottom pane.',
         'videoLink': 'https://www.youtube.com/embed/M2euDW0ssxk',
         'name': 'Markdown Previewer',
         'languages': ['JavaScript', 'HTML', 'CSS', 'React'],
@@ -67,10 +66,10 @@ const projects = {
     },
 
     'movieSearch':{
-        'description': '',
+        'description': 'A web application that lets the user search for a title or keyword of a movie, and returns the search results through calls to the TheMovieDB API.',
         'videoLink': 'https://www.youtube.com/embed/mAXYRuXrXS0',
         'name': 'Movie Search',
-        'languages': ['JavaScript', 'HTML', 'CSS', 'React'],
+        'languages': ['JavaScript', 'HTML', 'CSS', 'React', 'API'],
         'github': 'https://github.com/IsabellaCapriotti/TexasDeathRowData'
     },
 
@@ -92,7 +91,8 @@ function generateProjectCards(){
         // Generate new card
         const newProjectCard = document.createElement('div'); 
         newProjectCard.classList.add('projectCard'); 
-        newProjectCard.setAttribute('data-project-id', project); 
+        const projectID = project; 
+        newProjectCard.setAttribute('data-project-id', projectID); 
 
         project = projects[project]; 
 
@@ -102,6 +102,7 @@ function generateProjectCards(){
 
         const newTitle = document.createElement('div'); 
         newTitle.classList.add('projectTitle'); 
+        newTitle.setAttribute('data-project-id', projectID); 
         newTitle.textContent = project.name;  
 
         newProjectCard.appendChild(newTitle); 
@@ -132,6 +133,7 @@ function generateProjectCards(){
             projectDetailsContainer.classList.add('projectDetailsContainer'); 
 
             // Get corresponding project to clicked card
+
             const projectName = e.target.getAttribute('data-project-id'); 
             console.log(projectName); 
             currentProject = projects[projectName]; 
@@ -207,6 +209,7 @@ function generateProjectCards(){
             const demoVideo = document.createElement('iframe'); 
             demoVideo.classList.add('demoVideo'); 
             demoVideo.setAttribute('src', currentProject.videoLink);
+            demoVideo.setAttribute('allowfullscreen', 'true'); 
             
             projectDetailsContainer.appendChild(demoVideo); 
 

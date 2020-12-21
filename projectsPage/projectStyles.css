@@ -23,6 +23,7 @@
     text-align: center;
     font-size: 6rem;
     color: #EB681C;
+    height: 10vh;
 }
 
 /* Home Button */ 
@@ -53,7 +54,7 @@
     justify-content: space-evenly;
     align-content: space-between;
     width: 69vw; 
-    height: 85vh; 
+    height: 70vh; 
     padding: 3rem;
 }
 
@@ -190,14 +191,6 @@
     }
 
 
-    .nameHeader{
-        font-family: 'Fjalla One', sans-serif; 
-        color: #688e52;
-        text-align: center;
-        font-size: 8vw;
-        justify-self: start;
-    }
-
     .demoVideo{
         margin-left: 3vw;
     }
@@ -205,6 +198,15 @@
 }
 
 @media (max-width: 400px){
+
+
+    .nameHeader{
+        font-size: 8vw;
+    }
+
+    .projectsHeader{
+        font-size: 25vw;
+    }
 
     .projectInfoText{
         font-family: 'Raleway', sans-serif; 

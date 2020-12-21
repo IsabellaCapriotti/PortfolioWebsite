@@ -62,6 +62,9 @@ main{
     border-radius: 8px;  
     width: 60%;
     height: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    padding: 2rem;
 }
 
 .infoPanel{

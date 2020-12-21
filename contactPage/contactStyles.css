@@ -87,7 +87,7 @@ form{
     padding: .3rem;
 }
 
-.invalidEmailAddress{
+.invalidField{
     animation: flashRed 2s linear 0s 1;
 }
 
