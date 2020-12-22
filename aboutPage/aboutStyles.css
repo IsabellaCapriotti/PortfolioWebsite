@@ -46,7 +46,7 @@ main{
 /* Portrait*/ 
 
 .portrait{
-    background: url('../resources/portraitWithBG.png');
+    background: url('portraitWithBG.png');
     background-size: contain;
     background-attachment: scroll;
     background-repeat: no-repeat;
