@@ -159,7 +159,7 @@ form{
 }
 
 /* Adjustments for smaller screens */ 
-@media (max-width: 550px){
+@media (max-width: 500px){
     .formContainer{
         width: 100vw; 
     }
@@ -173,6 +173,10 @@ form{
         font-size: 20vw;
     }
 
+    .formContainer{
+        justify-content: flex-start;
+        padding-top: 4vh;
+    }
 
 }
 
