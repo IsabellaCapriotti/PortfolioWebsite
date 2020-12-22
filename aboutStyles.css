@@ -4,12 +4,17 @@
     box-sizing: border-box; 
 }
 
+
 /* Container */ 
+
+body{
+    background-color: #E8D2AE;
+}
+
 main{
     width: 100vw;
     height: 100vh;
     background-color: #E8D2AE;
-
     display: flex;
     flex-flow: column;
 }
@@ -65,6 +70,8 @@ main{
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
     padding: 2rem;
+    overflow-y: auto;
+    line-height: 4vh;
 }
 
 .infoPanel{
@@ -99,5 +106,6 @@ main{
     .infoContainer{
         height: 60%;
         width: 75%;
+        overflow-y: scroll; 
     }
 }
