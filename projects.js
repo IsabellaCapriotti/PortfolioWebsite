@@ -57,6 +57,15 @@ const projects = {
         'github': 'https://github.com/IsabellaCapriotti/MIPSGameOfLife'
     },
 
+    'flamingoGame':{
+        'description': 'A game built with C# in Unity where you play as a flamingo and try to eat as much shrimp as you can in one minute. Incorporates user controls, automated spawning of game objects, a basic user interface, water and terrain elements, and the ability to continually reset and replay the game.',
+        'videoLink': 'https://www.youtube.com/embed/qDMmyU3g2KkmyU3g2Kk',
+        'name': 'Flamingo Game',
+        'languages': ['C#', 'Unity'],
+        'github': 'https://play.unity.com/mg/other/flamingo-game',
+        'gameDemo': true
+    },
+    
     'markdownPreview':{
         'description': 'A web application that allows the user to type markdown in the top pane, and dynamically see a formatted preview in the bottom pane.',
         'videoLink': 'https://www.youtube.com/embed/M2euDW0ssxk',
@@ -199,7 +208,14 @@ function generateProjectCards(){
 
             const gitHubLinkText = document.createElement('p'); 
             gitHubLinkText.classList.add('projectInfoSectionHead'); 
-            gitHubLinkText.textContent = "Git it here!"; 
+
+            if(currentProject.hasOwnProperty("gameDemo")){
+                gitHubLinkText.textContent = "Play it here!"; 
+            }
+
+            else{
+                gitHubLinkText.textContent = "Git it here!"; 
+            }
             gitHubLink.appendChild(gitHubLinkText); 
             
             infoPanelItems.push(gitHubLink); 

@@ -81,9 +81,12 @@ sendBtn.addEventListener('click', (e) => {
         return;
     }
 
-    let actionField = `mailto:isabellamcapriotti@gmail.com?subject=${subject.value}&body=${emailBody.value}`; 
-    form.setAttribute("action", actionField); 
 
+    //Verify reCAPTCHA
+    if(grecaptcha.getResponse()){
+        let actionField = `mailto:isabellamcapriotti@gmail.com?subject=${subject.value}&body=${emailBody.value}`; 
+        form.setAttribute("action", actionField); 
+    }
 
 
 
