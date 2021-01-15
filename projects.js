@@ -25,6 +25,14 @@ const projects = {
         'github': 'https://github.com/IsabellaCapriotti/CommandLineUno'
     },
 
+    'mushroomClassifier': {
+        'description': 'A logistic regression model trained on data from The Audobon Society Field Guide to North American Mushrooms that predicts whether a mushroom is poisonous or edible. Achieves 95-98% accuracy on both training and test data. A small game also accompanies the model to demonstrate what it can do. The game generates random mushrooms, uses the trained model to predict their edibility, and challenges the player to make as many correct decisions as they can.',
+        'videoLink': 'https://www.youtube.com/embed/iPCGTIvfJhk',
+        'name': 'Mushroom Classifier',
+        'languages': ['Python','Logistic Regression', 'Machine Learning', 'Numpy', 'Pandas', ],
+        'github': 'https://github.com/IsabellaCapriotti/MushroomClassifier'
+    },
+
     'pokeInfo': {
         'description': 'An application that parses data from The Pokemon Database to serve a variety of information on the Pokemon games to the user, including stats, moves, abilities, types, and items.',
         'videoLink': 'https://www.youtube.com/embed/WWLIzPjz_bE',
@@ -59,7 +67,7 @@ const projects = {
 
     'flamingoGame':{
         'description': 'A game built with C# in Unity where you play as a flamingo and try to eat as much shrimp as you can in one minute. Incorporates user controls, automated spawning of game objects, a basic user interface, water and terrain elements, and the ability to continually reset and replay the game.',
-        'videoLink': 'https://www.youtube.com/embed/qDMmyU3g2KkmyU3g2Kk',
+        'videoLink': 'https://www.youtube.com/embed/qDMmyU3g2Kk',
         'name': 'Flamingo Game',
         'languages': ['C#', 'Unity'],
         'github': 'https://play.unity.com/mg/other/flamingo-game',
@@ -80,6 +88,14 @@ const projects = {
         'name': 'Movie Search',
         'languages': ['JavaScript', 'HTML', 'CSS', 'React', 'API'],
         'github': 'https://github.com/IsabellaCapriotti/MovieSearch'
+    },
+
+    'portfolioWebsite':{
+        'description': 'No explanation or demo needed, but you can take a look at the source code for this website here!',
+        'videoLink': '',
+        'name': 'This Website',
+        'languages': ['JavaScript', 'HTML', 'CSS'],
+        'github': 'https://github.com/IsabellaCapriotti/PortfolioWebsite'
     },
 
 }; 
@@ -222,17 +238,19 @@ function generateProjectCards(){
             
     
             //YouTube demo
-            const demoVideo = document.createElement('iframe'); 
-            demoVideo.classList.add('demoVideo'); 
-            demoVideo.setAttribute('src', currentProject.videoLink);
-            demoVideo.setAttribute('allowfullscreen', 'true'); 
-            
-            projectDetailsContainer.appendChild(demoVideo); 
+            if(currentProject.videoLink != ''){
+                const demoVideo = document.createElement('iframe'); 
+                demoVideo.classList.add('demoVideo'); 
+                demoVideo.setAttribute('src', currentProject.videoLink);
+                demoVideo.setAttribute('allowfullscreen', 'true'); 
+                projectDetailsContainer.appendChild(demoVideo); 
+            }
 
+            // Add all items to info panel
             infoPanelItems.forEach( (item) => {
                 projectInfoPanel.appendChild(item); 
             });
-
+            
 
             projectDetailsContainer.appendChild(projectInfoPanel); 
             modalCover.appendChild(projectDetailsContainer); 
