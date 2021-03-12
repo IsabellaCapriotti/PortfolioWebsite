@@ -1,0 +1,111 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+
+/* Container */ 
+
+body{
+    background-color: #E8D2AE;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #E8D2AE;
+    display: flex;
+    flex-flow: column;
+}
+ 
+/* Header */ 
+.greeting{
+    font-family: 'Amatic SC', cursive; 
+    font-size: 7vw;
+    position: relative;
+    left: 10%; 
+    width: 70%;
+    color: #eb681c;
+}
+
+/* Home Button */ 
+.homeBtn{
+    position: absolute; 
+    right: 3%;
+    top: 3%; 
+    background: transparent; 
+    border: none; 
+    color: #688E52; 
+    font-size: 2rem;
+}
+
+.homeBtn:hover{
+    color: #3b502f;
+}
+
+.homeBtn:visited{
+    color: #688E52; 
+}
+
+/* Portrait*/ 
+
+.portrait{
+    background: url('portraitWithBG.png');
+    background-size: contain;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30vw;
+    height: 60vh;
+    align-self: center;
+}
+
+/* Info */ 
+.infoContainer{
+    background-color: rgba(215, 178, 157, .5);
+    border-radius: 8px;  
+    width: 60%;
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    padding: 2rem;
+    overflow-y: auto;
+    line-height: 4vh;
+}
+
+.infoPanel{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw;
+    height: 100%;
+
+}
+
+
+/* Adjustments for small screens */ 
+@media (max-width: 700px){
+    .greeting{
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 900px){
+    .infoPanel{
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0; 
+    }
+
+    .portrait{
+        width: 75%;
+    }
+    .infoContainer{
+        height: 60%;
+        width: 75%;
+        overflow-y: scroll; 
+    }
+}
