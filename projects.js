@@ -5,7 +5,7 @@ const projects = {
         'description': 'A cross-platform Xamarin Forms app aimed at users trying to gain weight for health reasons. Stores user data in a SQLite database, and offers a variety of different goal-tracking methods for a customized user experience. Features a plant-themed UI to fit with the message of growing into better things.', 
         'videoLink': 'https://www.youtube.com/embed/WfolQdgKDac',
         'name': 'WeGrow App',
-        'languages': ['C#', 'XAML', 'Xamarin Forms' , '.NET Framework', 'SQLite'],
+        'languages': ['C#', 'XAML', 'Xamarin Forms' , '.NET Framework', 'SQLite', 'Microsoft Visual Studio'],
         'github': 'https://github.com/IsabellaCapriotti/WeGrowApp'
     },
 
@@ -39,6 +39,14 @@ const projects = {
         'name': 'Pokemon Info Grabber',
         'languages': ['Python'],
         'github': 'https://github.com/IsabellaCapriotti/PythonPokemonInfoGrabber'
+    },
+
+    'goodMemories':{
+        'description': 'A Xamarin Forms application that helps you to remember all the small, happy memories that make life full! After you add some memories, the app will pick a memory to highlight once every 24 hours, which you can easily view from the home page. Additionally, you can always look through all of the memories you\'ve added and edit previous entries.',
+        'videoLink': 'https://www.youtube.com/embed/1guS3rkeHTQ',
+        'name' : 'Good Memories App',
+        'languages': ['C#', '.NET Framework', 'XAML', 'Xamarin Forms', 'SQLite', 'Microsoft Visual Studio'],
+        'github': 'https://github.com/IsabellaCapriotti/GoodMemoriesApp'
     },
 
     'pulseLog':{
