@@ -33,6 +33,14 @@ const projects = {
         'github': 'https://github.com/IsabellaCapriotti/MushroomClassifier'
     },
 
+    'allist': {
+        'description': 'A web app that does a much better job than your memory at keeping track of all the things you want to watch, try, read, play, and listen to! Users can add items to any of the five aforementioned categories, view, edit, and delete them, and archive them as they complete more items on their list. Each user also gets their own profile page, where they can change a publicly viewable status and optionally show updates on items they have recently added or completed. Here, they can also view an archive of all the items they\'ve marked as complete in the past. You can even customize the color theme that shows up as you use the app!',
+        'videoLink': 'https://www.youtube.com/embed/GNKxF4WOOFE',
+        'name': 'Allist',
+        'languages': ['JavaScript', 'HTML', 'CSS', 'Python', 'Django', 'API'],
+        'github': 'https://github.com/IsabellaCapriotti/Allist'
+    },
+
     'pokeInfo': {
         'description': 'An application that parses data from The Pokemon Database to serve a variety of information on the Pokemon games to the user, including stats, moves, abilities, types, and items.',
         'videoLink': 'https://www.youtube.com/embed/WWLIzPjz_bE',

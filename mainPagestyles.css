@@ -265,7 +265,7 @@ nav li a:active, .mobileNavModal li a:active{
 
 /* Time of day adjustments */ 
 .nightBG{
-    background: url("resources/homepageNightBG.png"); 
+    background: url("homepageNightBG.png"); 
     background-size: cover; 
 }
 
@@ -327,7 +327,7 @@ nav li a:active, .mobileNavModal li a:active{
     }
 
     .nightBG{
-        background: url("resources/HomepageNightBGMobile.png");
+        background: url("HomepageNightBGMobile.png");
         background-size: contain;
     }
 }
