@@ -57,6 +57,14 @@ const projects = {
         'github': 'https://github.com/IsabellaCapriotti/GoodMemoriesApp'
     },
 
+    'coord': {
+        'description': 'A web application that gives users the power to combine different pieces of outfits and other designs into a single visualization. Shopping online often doesn\'t give you the chance to see items from different collections right next to one another as you would in-person. With Coord, you can see what your next creation will look like all together before you commit to buying it!',
+        'languages': ['Angular', 'Flask', 'MongoDB', 'JavaScript', 'Python', 'HTML', 'CSS'],
+        'name': 'Coord', 
+        'github': 'https://github.com/IsabellaCapriotti/coord',
+        'videoLink': 'https://www.youtube.com/embed/haq4bGZXwY0'
+    },
+
     'pulseLog':{
         'description': 'A web app that allows the user to track their resting and active heart rates across a series of days. Users local browser storage to persist state across uses.',
         'videoLink': 'https://www.youtube.com/embed/LEJbQCE2cpU',
