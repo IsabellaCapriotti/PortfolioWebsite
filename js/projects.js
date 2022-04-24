@@ -41,14 +41,6 @@ const projects = {
         'github': 'https://github.com/IsabellaCapriotti/Allist'
     },
 
-    'pokeInfo': {
-        'description': 'An application that parses data from The Pokemon Database to serve a variety of information on the Pokemon games to the user, including stats, moves, abilities, types, and items.',
-        'videoLink': 'https://www.youtube.com/embed/WWLIzPjz_bE',
-        'name': 'Pokemon Info Grabber',
-        'languages': ['Python'],
-        'github': 'https://github.com/IsabellaCapriotti/PythonPokemonInfoGrabber'
-    },
-
     'goodMemories':{
         'description': 'A Xamarin Forms application that helps you to remember all the small, happy memories that make life full! After you add some memories, the app will pick a memory to highlight once every 24 hours, which you can easily view from the home page. Additionally, you can always look through all of the memories you\'ve added and edit previous entries.',
         'videoLink': 'https://www.youtube.com/embed/1guS3rkeHTQ',
@@ -57,12 +49,37 @@ const projects = {
         'github': 'https://github.com/IsabellaCapriotti/GoodMemoriesApp'
     },
 
+    'creditCardFraudDetection': {
+        'description': 'An implementation of a neural network in Tensorflow that detects fraudulent credit card transactions from Kaggle\'s Credit Card Fraud Detection dataset. This implementation uses SMOTE oversampling to address the heavily imbalanced original data. The model achieves an average AUPRC of .96 on test data coming from the original distribution. This was a collaborative project with 3 other students for an introductory course in machine learning.',
+        'videoLink': '',
+        'name': 'Fraudulent Credit Card Transaction Detection',
+        'languages': ['Python', 'Tensorflow', 'scikit-learn', 'Keras', 'Machine Learning', 'Neural Networks', 'Jupyter Notebook'],
+        'github': 'https://github.com/IsabellaCapriotti/cs422_fraudulent_transactions',
+        'posterLink': 'assets/CS422 project poster.pdf'
+    },
+
+    'textToSpeechGUI': {
+        'description': 'A simple GUI that allows the user to enter or paste text into a text window, then generate an MP3 file of the text read aloud using Google Cloud\'s Text to Speech API. This app was created on a freelance basis for a fellow student who has dyslexia and needed assistive technology to put his course materials into an audio format. The delivery process included packaging the application as an executable and ensuring he could run it successfully on his machine.',
+        'videoLink': 'https://www.youtube.com/embed/VCpysbVkmH8',
+        'name': 'Text to Speech GUI', 
+        'languages': ['Python', 'Tkinter', 'Google Cloud API', 'Executables'],
+        'github': 'https://github.com/IsabellaCapriotti/TextToSpeechGUI'
+    },
+
     'coord': {
         'description': 'A web application that gives users the power to combine different pieces of outfits and other designs into a single visualization. Shopping online often doesn\'t give you the chance to see items from different collections right next to one another as you would in-person. With Coord, you can see what your next creation will look like all together before you commit to buying it!',
         'languages': ['Angular', 'Flask', 'MongoDB', 'JavaScript', 'Python', 'HTML', 'CSS'],
         'name': 'Coord', 
         'github': 'https://github.com/IsabellaCapriotti/coord',
         'videoLink': 'https://www.youtube.com/embed/haq4bGZXwY0'
+    },
+
+    'pokeInfo': {
+        'description': 'An application that parses data from The Pokemon Database to serve a variety of information on the Pokemon games to the user, including stats, moves, abilities, types, and items.',
+        'videoLink': 'https://www.youtube.com/embed/WWLIzPjz_bE',
+        'name': 'Pokemon Info Grabber',
+        'languages': ['Python'],
+        'github': 'https://github.com/IsabellaCapriotti/PythonPokemonInfoGrabber'
     },
 
     'pulseLog':{
@@ -268,6 +285,17 @@ function generateProjectCards(){
                 demoVideo.setAttribute('src', currentProject.videoLink);
                 demoVideo.setAttribute('allowfullscreen', 'true'); 
                 projectDetailsContainer.appendChild(demoVideo); 
+            }
+
+            // PDF demo
+            else if(currentProject.posterLink != ''){
+                console.log('in here'); 
+                const posterLink = document.createElement("a"); 
+                posterLink.setAttribute('href', currentProject.posterLink); 
+                posterLink.textContent = 'View project poster here';
+                posterLink.classList.add('projectInfoSectionHead') 
+                posterLink.classList.add('gitHubLink'); 
+                infoPanelItems.push(posterLink); 
             }
 
             // Add all items to info panel
